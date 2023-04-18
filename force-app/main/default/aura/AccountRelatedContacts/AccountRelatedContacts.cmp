@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="MyAccountController" >
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="contactList" type="Contact[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    <aura:iteration items="{!v.contactList}" var="con">
+        {!con.Name}
+    </aura:iteration>
+</aura:component>

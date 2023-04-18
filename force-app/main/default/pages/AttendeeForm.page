@@ -1,0 +1,32 @@
+<apex:page controller="EventAttendeeForm">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection id="Section1" collapsible="true" title="Event Location">
+                <apex:inputField value="{!location.Name}"/>
+                <apex:inputField value="{!location.Street__c}"/>
+                <apex:inputField value="{!location.City__c}"/>
+                <apex:inputField value="{!location.Postal_Code__c}"/>
+                <apex:inputField value="{!location.Country__c}"/>
+                <apex:inputField value="{!location.Landmark__c}"/>
+                <apex:inputField value="{!location.Verified__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="Section2" title="Attendee Registration" collapsible="true">
+                <apex:inputField value="{!attendee.Name}"/>
+                <apex:inputField value="{!attendee.Email__c}"/>
+                <apex:inputField value="{!attendee.Phone_No__c}"/>
+                <apex:inputField value="{!attendee.Company_Name__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="Section3" title="Event Attendee Registration" collapsible="true">
+                <apex:inputField value="{!eventAttendee.Name}"/>
+                <apex:inputField value="{!eventAttendee.Event__c}"/>
+                <apex:inputField value="{!eventAttendee.Attendee__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!addEventAttendee}" value="Save" onclick="addEventAttendee"></apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

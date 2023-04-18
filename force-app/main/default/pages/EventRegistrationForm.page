@@ -1,0 +1,42 @@
+<apex:page controller="EventOrganizerFrom">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection id="Section1" collapsible="true" title="Event Organizer">
+                <apex:inputField value="{!eorganizer.name}"/>
+                <apex:inputField value="{!eorganizer.Email__c}"/>
+                <apex:inputField value="{!eorganizer.Phone_No__c}"/>
+                <apex:inputField value="{!eorganizer.Alternative_Phone_Number__c}"/>
+                <apex:inputField value="{!eorganizer.Alternative_Email__c}"/>
+                <apex:inputField value="{!eorganizer.Location_Address_Book__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="Section2" collapsible="true" title="Event Details">
+                <apex:inputField value="{!event.Name}"/>
+                <apex:inputField value="{!event.Event_Organizer__c}"/>
+                <apex:inputField value="{!event.Start_Date_Time__c}"/>
+                <apex:inputField value="{!event.End_Date_Time__c}"/>
+                <apex:inputField value="{!event.Live__c}"/>
+                <apex:inputField value="{!event.Recurring__c}"/>
+                <apex:inputField value="{!event.Event_Type__c}"/>
+                <apex:inputField value="{!event.Location_of_event__c}"/>
+                <apex:inputField value="{!event.Max_Seats__c}"/>
+                <apex:inputField value="{!event.Status__c}"/>
+                <apex:inputField value="{!event.Frequency__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="Section3" collapsible="true" title="Event Location">
+                <apex:inputField value="{!location.Name}"/>
+                <apex:inputField value="{!location.Street__c}"/>
+                <apex:inputField value="{!location.City__c}"/>
+                <apex:inputField value="{!location.Postal_Code__c}"/>
+                <apex:inputField value="{!location.Country__c}"/>
+                <apex:inputField value="{!location.Landmark__c}"/>
+                <apex:inputField value="{!location.Verified__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!addEventOrganizer}" value="Save" onclick="addEventOrganizer"></apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

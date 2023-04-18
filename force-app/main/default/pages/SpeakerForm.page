@@ -1,0 +1,17 @@
+<apex:page controller="EventSpeakerForm">
+    <apex:pageMessages id="message"></apex:pageMessages>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Speaker Registration">
+                <apex:inputField value="{!speaker.Name}"/>
+                <apex:inputField value="{!speaker.Email__c}"/>
+                <apex:inputField value="{!speaker.Phone__c}"/>
+                <apex:inputField value="{!speaker.Company_Name__c}"/>
+                <apex:inputField value="{!eventSpeaker.Event_Details__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!addSpeaker}" value="Save" style="margin: 5px"></apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

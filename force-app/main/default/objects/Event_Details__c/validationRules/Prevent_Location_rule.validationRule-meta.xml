@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Location_rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   ISPICKVAL( Event_Type__c , &apos;Virtual&apos;),
+   NOT(ISBLANK( Location_of_event__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Location_of_event__c</errorDisplayField>
+    <errorMessage>Your are Event Type is Virtual You dont Need Location</errorMessage>
+</ValidationRule>

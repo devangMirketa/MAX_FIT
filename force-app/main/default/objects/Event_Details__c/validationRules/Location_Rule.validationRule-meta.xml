@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Event_Type__c , &apos;In-Person&apos;) , ISBLANK( Location_of_event__c ) )</errorConditionFormula>
+    <errorDisplayField>Location_of_event__c</errorDisplayField>
+    <errorMessage>Your Event Type in In-Person Please Fill the Location</errorMessage>
+</ValidationRule>

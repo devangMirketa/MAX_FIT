@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Speaker_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Event_Details__r.End_Date_Time__c &lt; NOW() , NOT(Event_Details__r.Live__c))</errorConditionFormula>
+    <errorMessage>Check You End Date or Is Event is Live or Not?</errorMessage>
+</ValidationRule>
